@@ -1,5 +1,5 @@
 
-def middle_value(input):
+def pivot_value(input):
   index = round(len(input) /2) -1
   return input[index]
 
@@ -7,8 +7,8 @@ def sort(input):
   if len(input) <= 1:
     return input
   else:
-    middle = middle_value(input)
-    lower = [item for item in input if item <  middle]
-    pivot = [item for item in input if item == middle]
-    upper = [item for item in input if item >  middle]
-    return sort(lower) + pivot + sort(upper)
+    pivot = pivot_value(input)
+    lower = [item for item in input if item <   pivot ]
+    pivots = [item for item in input if item == pivot ]
+    upper = [item for item in input if item >   pivot ]
+    return sort(lower) + pivots + sort(upper)
