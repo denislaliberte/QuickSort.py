@@ -11,5 +11,4 @@ def sort(input):
     lower = [item for item in input if item <  middle]
     pivot = [item for item in input if item == middle]
     upper = [item for item in input if item >  middle]
-    return lower + pivot + upper
-
+    return sort(lower) + pivot + sort(upper)
