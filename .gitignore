@@ -62,4 +62,5 @@ target/
  [Ss]cripts
  pyvenv.cfg
  pip-selfcheck.json
+p3/
 
