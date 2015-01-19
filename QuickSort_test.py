@@ -19,5 +19,11 @@ class sort_test(unittest.TestCase):
     a = list(range(1, 1000));
     shuffle(a)
     self.assertEqual(sort(a),list(range(1, 1000)))
+    a = list(range(-1000, 1000));
+    shuffle(a)
+    self.assertEqual(sort(a),list(range(-1000, 1000)))
+    a = list(range(1, 100000));
+    shuffle(a)
+    self.assertEqual(sort(a),list(range(1, 100000)))
   def test_middle_index(self):
     self.assertEqual(pivot_value([1,2,3]),2)
