@@ -9,6 +9,6 @@ class sort_test(unittest.TestCase):
     self.assertEqual(sort([1]),[1])
   def test_sort_three_items(self):
     self.assertEqual(sort([3,2,1]),[1,2,3])
-    #self.assertEqual(sort([10,20,30]),[10,20,30])
+    self.assertEqual(sort([-1,2,3]),[-1,2,3])
   def test_middle_index(self):
     self.assertEqual(middle([1,2,3]),1)
