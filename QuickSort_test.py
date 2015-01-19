@@ -1,5 +1,6 @@
 import unittest
 from QuickSort import *
+from random import shuffle
 
 
 class sort_test(unittest.TestCase):
@@ -14,5 +15,9 @@ class sort_test(unittest.TestCase):
     self.assertEqual(sort([3,2,1,4]),[1,2,3,4])
     self.assertEqual(sort([5,3,2,1,4]),[1,2,3,4,5])
     self.assertEqual(sort([5,5,5,1,4]),[1,4,5,5,5])
+  def test_large_array(self):
+    a = list(range(1, 1000));
+    shuffle(a)
+    self.assertEqual(sort(a),list(range(1, 1000)))
   def test_middle_index(self):
     self.assertEqual(pivot_value([1,2,3]),2)
